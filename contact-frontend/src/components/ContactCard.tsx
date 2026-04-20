@@ -21,7 +21,7 @@ type Props = {
 // }
 
 export default function ContactCard({ contact, onEdit, onDelete }: Props) {
-  // Parse tags from "work,friend" string to ["work", "friend"] array
+  
 
   const tagList =
   contact.tags && contact.tags !== "null"
@@ -47,8 +47,8 @@ return (
       <Image
         src="/images/image.png"
         alt="User"
-        width={64}
-        height={64}
+        width={66}
+        height={66}
         className="rounded-full object-cover"
       />
       {/* Name */}

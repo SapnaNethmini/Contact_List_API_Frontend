@@ -23,19 +23,19 @@ export default function RegisterPage() {
     e.preventDefault()
     setError('')
    
-  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$/;
-  // - At least 6 characters
-  // - At least one lowercase
-  // - At least one uppercase
-  // - At least one number
-  // - At least one special character
+  // const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$/;
+  // // - At least 6 characters
+  // // - At least one lowercase
+  // // - At least one uppercase
+  // // - At least one number
+  // // - At least one special character
 
-  if (!passwordRegex.test(password)) {
-    setError(
-      "Password must be at least 6 characters and include uppercase, lowercase, number, and special character."
-    )
-    return
-  }
+  // if (!passwordRegex.test(password)) {
+  //   setError(
+  //     "Password must be at least 6 characters and include uppercase, lowercase, number, and special character."
+  //   )
+  //   return
+  // }
 
   setLoading(true)
 
@@ -114,7 +114,7 @@ export default function RegisterPage() {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="••••••••"
             required
-            minLength={6}
+            // minLength={6}
             className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>

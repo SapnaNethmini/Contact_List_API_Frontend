@@ -1,12 +1,3 @@
-// Gets tokens from AuthContext
-// Wraps callApi()
-// Automatically passes:
-// accessToken
-// refreshToken
-// updateTokens
-// logout
-// Handles redirect to /login on logout
-
 //Instead of manually passing tokens everywhere, this hook auto-injects tokens into API calls
 
 import { useRouter } from 'next/navigation'

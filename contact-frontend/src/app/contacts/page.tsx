@@ -121,15 +121,7 @@ export default function ContactsPage() {
   return (
    
     //<div className="min-h-screen bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400">
-//       <div
-//   className="min-h-screen bg-no-repeat bg-center bg-cover relative"
-//   style={{
-//     backgroundImage: "url('/images/bg4.jpg')",
-//     backgroundSize: "cover",      // ensures it covers the div
-//     backgroundPosition: "center",  // keeps it centered
-//     backgroundAttachment: "fixed", // optional, makes parallax effect
-//   }}
-// >
+
 <div className="min-h-screen bg-[url('/images/background7.jpg')] bg-no-repeat bg-center bg-cover bg-fixed relative">
  
   <div className="absolute inset-0 bg-black/50"></div>
@@ -161,7 +153,7 @@ export default function ContactsPage() {
     </div>
   </nav>
 
-      <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto px-4 py-8">
 
         <div className="flex items-center justify-between mb-6">
           <div>
@@ -215,7 +207,7 @@ export default function ContactsPage() {
         )}
 
         {!loading && contacts.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contacts.map((contact) => (
               <ContactCard
                 key={contact.ID ?? contact.email}

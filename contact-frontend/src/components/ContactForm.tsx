@@ -30,7 +30,6 @@ export default function ContactForm({ contact, onClose }: Props) {
       setPhone(contact.phone || '')
       setEmail(contact.email || '')
       setAddress(contact.address || '')
-      //setTags(contact.tags ? contact.tags.split(',').filter(Boolean).join(', ') : '')
       setTags(contact.tags && Array.isArray(contact.tags) ? contact.tags.filter(Boolean).join(', ') : '')
       setNotes(contact.notes || '')
     }
