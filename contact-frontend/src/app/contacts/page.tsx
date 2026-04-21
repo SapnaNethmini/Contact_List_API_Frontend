@@ -69,12 +69,6 @@ export default function ContactsPage() {
     }
   }
 
-  //  open modal
-  function confirmDelete(contact: Contact) {
-    setContactToDelete(contact) 
-    setDeleteModalOpen(true)
-  }
-
  
 
   async function handleDelete() {
@@ -91,6 +85,13 @@ export default function ContactsPage() {
     setDeleteModalOpen(false)
     setContactToDelete(null)
   }
+  }
+
+
+   //  open modal
+  function confirmDelete(contact: Contact) {
+    setContactToDelete(contact) 
+    setDeleteModalOpen(true)
   }
 
 
@@ -122,43 +123,43 @@ export default function ContactsPage() {
    
     //<div className="min-h-screen bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400">
 
-<div className="min-h-screen bg-[url('/images/background7.jpg')] bg-no-repeat bg-center bg-cover bg-fixed relative">
+   <div className="min-h-screen bg-[url('/images/background7.jpg')] bg-no-repeat bg-center bg-cover bg-fixed relative">
  
-  <div className="absolute inset-0 bg-black/50"></div>
-  <div className="relative z-10">
+    <div className="absolute inset-0 bg-black/50"></div>
+    <div className="relative z-10">
    
    
-  <nav className="bg-gray-300 border-b border-gray-300">
-  <div className="w-full px-6 h-16 flex items-center justify-between">
+       <nav className="bg-gray-300 border-b border-gray-300">
+       <div className="w-full px-6 h-16 flex items-center justify-between">
     
-    {/* Left side */}
-    <div className="flex items-center gap-2">
-      <img
-        src="/images/contact_list.jpg"
-        alt="Contact List"
-        className="w-8 h-8 rounded-full object-cover"
-      />
-      <span className="font-bold text-gray-900 text-lg">
-        CONTACT LIST
-      </span>
-    </div>
+          {/* Left side */}
+          <div className="flex items-center gap-2">
+            <img
+              src="/images/contact_list.jpg"
+              alt="Contact List"
+              className="w-8 h-8 rounded-full object-cover"
+            />
+            <span className="font-bold text-gray-900 text-lg">
+              CONTACT LIST
+            </span>
+          </div>
 
-    {/* Logout */}
-    <button
-      onClick={handleLogout}
-      className="bg-black hover:bg-gray-500 text-white text-sm font-medium px-4 py-2.5 rounded-xl transition flex items-center gap-1.5"
-    >
-      Log Out
-    </button>    
-    </div>
-  </nav>
+            {/* Logout */}
+            <button
+              onClick={handleLogout}
+              className="bg-black hover:bg-gray-500 text-white text-sm font-medium px-4 py-2.5 rounded-xl transition flex items-center gap-1.5"
+            >
+              Log Out
+            </button>    
+              </div>
+       </nav>
 
       <div className="max-w-6xl mx-auto px-4 py-8">
 
         <div className="flex items-center justify-between mb-6">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Contacts</h1>
-            <p className="text-m text-gray-700 mt-0.5">{total} contact{total !== 1 ? 's' : ''}</p>
+            <p className="text-m text-gray-400 mt-0.5">{total} contact{total !== 1 ? 's' : ''}</p>
           </div>
           <button
             onClick={openAddForm}
@@ -230,33 +231,33 @@ export default function ContactsPage() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
         <div className="bg-white rounded-lg p-6 max-w-sm w-full">
           
-      <h3 className="text-lg font-semibold mb-4">Delete Contact?</h3>
+         <h3 className="text-lg font-semibold mb-4">Delete Contact?</h3>
       
-      <p className="text-gray-600 mb-6">
-        Are you sure you want to delete this contact?
-      </p>
+          <p className="text-gray-600 mb-6">
+            Are you sure you want to delete this contact?
+          </p>
 
-      <div className="flex justify-end gap-3">
-        
-        {/* Cancel Button */}
-        <button
-          onClick={() => setDeleteModalOpen(false)}
-          className="flex-1 bg-gray-300 text-black text-sm py-2 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-gray-700 transition"
-        >
-          Cancel
-        </button>
+          <div className="flex justify-end gap-3">
+            
+            {/* Cancel Button */}
+            <button
+              onClick={() => setDeleteModalOpen(false)}
+              className="flex-1 bg-gray-300 text-black text-sm py-2 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-gray-700 transition"
+            >
+              Cancel
+            </button>
 
-        {/* Delete Button */}
-        <button
-          onClick={handleDelete}
-          className="flex-1 bg-black text-white text-sm py-2 rounded-lg border border-gray-200 hover:bg-red-50 hover:text-red-600 transition"
-        >
-          Delete
-        </button>
+            {/* Delete Button */}
+            <button
+              onClick={handleDelete}
+              className="flex-1 bg-black text-white text-sm py-2 rounded-lg border border-gray-200 hover:bg-red-50 hover:text-red-600 transition"
+            >
+              Delete
+            </button>
 
-      </div>
-    </div>
-  </div>
+          </div>
+        </div>
+        </div>
 )}
 
     </div>

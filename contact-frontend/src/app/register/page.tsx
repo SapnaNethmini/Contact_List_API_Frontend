@@ -1,8 +1,3 @@
-// src/app/register/page.tsx
-// Register page — user enters name, email and password.
-// Calls POST /auth/register on the Go backend.
-// On success, redirects to the login page.
-
 'use client'
 
 import { useState } from 'react'

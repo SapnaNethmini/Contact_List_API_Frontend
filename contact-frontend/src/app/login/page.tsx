@@ -1,6 +1,3 @@
-// src/app/login/page.tsx
-// Login page — user enters email and password.
-
 // login() from useAuth() saves tokens into React state (AuthContext)
 
 'use client'

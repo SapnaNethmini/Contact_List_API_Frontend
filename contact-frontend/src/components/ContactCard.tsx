@@ -8,17 +8,6 @@ type Props = {
   onDelete: () => void
 }
 
-// function initials(name: string) {
-//   return name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2)
-// }
-
-// Pick a background color based on the name (so each contact has a consistent color)
-// const colors = ['bg-blue-500', 'bg-purple-500', 'bg-green-500', 'bg-orange-500', 'bg-pink-500', 'bg-teal-500']
-// function avatarColor(name: string) {
-//   let hash = 0
-//   for (let i = 0; i < name.length; i++) hash += name.charCodeAt(i)
-//   return colors[hash % colors.length]
-// }
 
 export default function ContactCard({ contact, onEdit, onDelete }: Props) {
   
@@ -38,11 +27,6 @@ return (
     
     {/* Top Section (Profile Area) */}
     <div className="flex flex-col items-center text-center p-1 bg-gray-100">
-
-      {/* Profile Image / Avatar */}
-      {/* <div className="w-16 h-16 rounded-full bg-gray-300 flex items-center justify-center text-lg font-semibold text-white shadow-sm">
-        {initials(contact.name)}
-      </div> */}
 
       <Image
         src="/images/image.png"
